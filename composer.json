@@ -4,6 +4,9 @@
     "description": "OAuth 1 PHP Library",
     "keywords": ["oauth"],
     "homepage": "https://github.com/EHER/OAuth",
+    "psr-0": {
+        "OAuth": "src/"
+    },
     "authors": 
     {
         "name": "Andy Smith",
