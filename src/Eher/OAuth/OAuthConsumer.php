@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth;
+namespace Eher\OAuth;
 
 class OAuthConsumer {
   public $key;

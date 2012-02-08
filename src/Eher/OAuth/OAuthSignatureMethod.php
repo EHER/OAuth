@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth;
+namespace Eher\OAuth;
 
 /**
  * A class for implementing a Signature Method

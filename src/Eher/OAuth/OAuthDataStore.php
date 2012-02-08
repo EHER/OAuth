@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth;
+namespace Eher\OAuth;
 
 class OAuthDataStore {
   function lookup_consumer($consumer_key) {

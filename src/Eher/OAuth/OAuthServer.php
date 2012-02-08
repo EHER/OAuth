@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth;
+namespace Eher\OAuth;
 
 class OAuthServer {
   protected $timestamp_threshold = 300; // in seconds, five minutes

@@ -1,6 +1,6 @@
 <?php
 
-namespace OAuth;
+namespace Eher\OAuth;
 
 /**
  * The PLAINTEXT method does not provide any security protection and SHOULD only be used
