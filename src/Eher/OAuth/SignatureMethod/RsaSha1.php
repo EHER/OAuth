@@ -1,6 +1,6 @@
 <?php
 
-namespace Eher\OAuth;
+namespace Eher\OAuth\SignatureMethod;
 
 /**
  * The RSA-SHA1 signature method uses the RSASSA-PKCS1-v1_5 signature algorithm as defined in
@@ -10,7 +10,7 @@ namespace Eher\OAuth;
  * specification.
  *   - Chapter 9.3 ("RSA-SHA1")
  */
-abstract class OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod {
+abstract class RsaSha1 extends SignatureMethod {
   public function get_name() {
     return "RSA-SHA1";
   }

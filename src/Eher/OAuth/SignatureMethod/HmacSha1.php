@@ -1,6 +1,6 @@
 <?php
 
-namespace Eher\OAuth;
+namespace Eher\OAuth\SignatureMethod;
 
 /**
  * The HMAC-SHA1 signature method uses the HMAC-SHA1 signature algorithm as defined in [RFC2104]
@@ -9,7 +9,7 @@ namespace Eher\OAuth;
  * character (ASCII code 38) even if empty.
  *   - Chapter 9.2 ("HMAC-SHA1")
  */
-class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod {
+class HmacSha1 extends SignatureMethod {
   function get_name() {
     return "HMAC-SHA1";
   }
