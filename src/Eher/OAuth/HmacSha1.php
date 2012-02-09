@@ -9,7 +9,7 @@ namespace Eher\OAuth;
  * character (ASCII code 38) even if empty.
  *   - Chapter 9.2 ("HMAC-SHA1")
  */
-class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod {
+class HmacSha1 extends SignatureMethod {
   function get_name() {
     return "HMAC-SHA1";
   }

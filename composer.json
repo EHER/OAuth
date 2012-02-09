@@ -4,11 +4,12 @@
     "description": "OAuth 1 PHP Library",
     "keywords": ["oauth"],
     "homepage": "https://github.com/EHER/OAuth",
-    "authors": 
-    {
-        "name": "Andy Smith",
-        "homepage": "http://term.ie/"
-    },
+    "authors":[
+        {
+            "name": "Andy Smith",
+            "homepage": "http://term.ie/"
+        }
+    ],
     "require": {
         "php": ">=5.3.0"
     }
