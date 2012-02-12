@@ -1,12 +1,12 @@
 {
-    "name": "OAuth",
+    "name": "Eher/OAuth",
     "type": "library",
     "require": {
         "php": ">=5.3.0"
     },
     "autoload": {
         "psr-0": {
-            "OAuth": "src/"
+            "Eher/OAuth": "src/"
         }
     }
 }
