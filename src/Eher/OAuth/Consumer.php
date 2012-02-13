@@ -2,7 +2,7 @@
 
 namespace Eher\OAuth;
 
-class OAuthConsumer {
+class Consumer {
   public $key;
   public $secret;
 

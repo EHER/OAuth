@@ -27,7 +27,7 @@ class PlainText extends SignatureMethod {
       ($token) ? $token->secret : ""
     );
 
-    $key_parts = OAuthUtil::urlencode_rfc3986($key_parts);
+    $key_parts = Util::urlencode_rfc3986($key_parts);
     $key = implode('&', $key_parts);
     $request->base_string = $key;
 

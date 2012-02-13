@@ -1,11 +1,11 @@
 <?php
 
-namespace OAuth;
+namespace Eher\OAuth;
 
-class OAuthUtil {
+class Util {
   public static function urlencode_rfc3986($input) {
   if (is_array($input)) {
-    return array_map(array('app\models\oauth\OAuthUtil', 'urlencode_rfc3986'), $input);
+    return array_map(array('Eher\OAuth\Util', 'urlencode_rfc3986'), $input);
   } else if (is_scalar($input)) {
     return str_replace(
       '+',
@@ -34,7 +34,7 @@ class OAuthUtil {
     $params = array();
     if (preg_match_all('/('.($only_allow_oauth_parameters ? 'oauth_' : '').'[a-z_-]*)=(:?"([^"]*)"|([^,]*))/', $header, $matches)) {
       foreach ($matches[1] as $i => $h) {
-        $params[$h] = OAuthUtil::urldecode_rfc3986(empty($matches[3][$i]) ? $matches[4][$i] : $matches[3][$i]);
+        $params[$h] = Util::urldecode_rfc3986(empty($matches[3][$i]) ? $matches[4][$i] : $matches[3][$i]);
       }
       if (isset($params['realm'])) {
         unset($params['realm']);
@@ -100,8 +100,8 @@ class OAuthUtil {
     $parsed_parameters = array();
     foreach ($pairs as $pair) {
       $split = explode('=', $pair, 2);
-      $parameter = OAuthUtil::urldecode_rfc3986($split[0]);
-      $value = isset($split[1]) ? OAuthUtil::urldecode_rfc3986($split[1]) : '';
+      $parameter = Util::urldecode_rfc3986($split[0]);
+      $value = isset($split[1]) ? Util::urldecode_rfc3986($split[1]) : '';
 
       if (isset($parsed_parameters[$parameter])) {
         // We have already recieved parameter(s) with this name, so add to the list
@@ -125,8 +125,8 @@ class OAuthUtil {
     if (!$params) return '';
 
     // Urlencode both keys and values
-    $keys = OAuthUtil::urlencode_rfc3986(array_keys($params));
-    $values = OAuthUtil::urlencode_rfc3986(array_values($params));
+    $keys = Util::urlencode_rfc3986(array_keys($params));
+    $values = Util::urlencode_rfc3986(array_values($params));
     $params = array_combine($keys, $values);
 
     // Parameters are sorted by name, using lexicographical byte value ordering.
