@@ -19,7 +19,7 @@ class PlainText extends SignatureMethod {
    *   - Chapter 9.4.1 ("Generating Signatures")
    *
    * Please note that the second encoding MUST NOT happen in the SignatureMethod, as
-   * OAuthRequest handles this!
+   * Request handles this!
    */
   public function build_signature($request, $consumer, $token) {
     $key_parts = array(

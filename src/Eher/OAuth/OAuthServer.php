@@ -94,7 +94,7 @@ class OAuthServer {
    * figure out the signature with some defaults
    */
   private function get_signature_method($request) {
-    $signature_method = $request instanceof OAuthRequest
+    $signature_method = $request instanceof Request
         ? $request->get_parameter("oauth_signature_method")
         : NULL;
 
@@ -119,7 +119,7 @@ class OAuthServer {
    * try to find the consumer for the provided request's consumer key
    */
   private function get_consumer($request) {
-    $consumer_key = $request instanceof OAuthRequest
+    $consumer_key = $request instanceof Request
         ? $request->get_parameter("oauth_consumer_key")
         : NULL;
 
@@ -139,7 +139,7 @@ class OAuthServer {
    * try to find the token for the provided request's token key
    */
   private function get_token($request, $consumer, $token_type="access") {
-    $token_field = $request instanceof OAuthRequest
+    $token_field = $request instanceof Request
          ? $request->get_parameter('oauth_token')
          : NULL;
 
@@ -158,10 +158,10 @@ class OAuthServer {
    */
   private function check_signature($request, $consumer, $token) {
     // this should probably be in a different method
-    $timestamp = $request instanceof OAuthRequest
+    $timestamp = $request instanceof Request
         ? $request->get_parameter('oauth_timestamp')
         : NULL;
-    $nonce = $request instanceof OAuthRequest
+    $nonce = $request instanceof Request
         ? $request->get_parameter('oauth_nonce')
         : NULL;
 
