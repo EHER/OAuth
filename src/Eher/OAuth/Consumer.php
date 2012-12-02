@@ -13,7 +13,7 @@ class Consumer {
   }
 
   function __toString() {
-    return "OAuthConsumer[key=$this->key,secret=$this->secret]";
+    return "Consumer[key=$this->key,secret=$this->secret]";
   }
 }
 

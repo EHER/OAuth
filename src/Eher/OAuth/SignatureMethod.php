@@ -19,7 +19,7 @@ abstract class SignatureMethod {
    * the encoding is handled in Request when the final
    * request is serialized
    * @param Request $request
-   * @param OAuthConsumer $consumer
+   * @param Consumer $consumer
    * @param OAuthToken $token
    * @return string
    */
@@ -28,7 +28,7 @@ abstract class SignatureMethod {
   /**
    * Verifies that a given signature is correct
    * @param Request $request
-   * @param OAuthConsumer $consumer
+   * @param Consumer $consumer
    * @param OAuthToken $token
    * @param string $signature
    * @return bool
