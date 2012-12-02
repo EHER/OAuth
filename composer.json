@@ -10,5 +10,8 @@
         "psr-0": {
             "Eher\\OAuth": "src"
         }
+    },
+    "require-dev": {
+        "eher/phpunit": "1.6"
     }
 }
