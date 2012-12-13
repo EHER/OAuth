@@ -175,7 +175,7 @@ class OAuthServer {
       $request,
       $consumer,
       $token,
-      $signature
+      Util::urldecode_rfc3986($signature)
     );
 
     if (!$valid_sig) {
