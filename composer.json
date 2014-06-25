@@ -1,5 +1,5 @@
 {
-    "name": "eher/oauth",
+    "name": "bonroyage/oauth",
     "type": "library",
     "license": "BSD-3-Clause",
     "description": "OAuth 1 PHP Library",
