@@ -7,10 +7,12 @@ namespace Eher\OAuth;
  * over a secure channel such as HTTPS. It does not use the Signature Base String.
  *   - Chapter 9.4 ("PLAINTEXT")
  */
-class PlainText extends SignatureMethod {
-  public function get_name() {
-    return "PLAINTEXT";
-  }
+class PlainText extends SignatureMethod
+{
+    public function get_name()
+    {
+        return "PLAINTEXT";
+    }
 
   /**
    * oauth_signature is set to the concatenated encoded values of the Consumer Secret and
@@ -21,16 +23,17 @@ class PlainText extends SignatureMethod {
    * Please note that the second encoding MUST NOT happen in the SignatureMethod, as
    * Request handles this!
    */
-  public function build_signature($request, $consumer, $token) {
-    $key_parts = array(
+  public function build_signature($request, $consumer, $token)
+  {
+      $key_parts = array(
       $consumer->secret,
-      ($token) ? $token->secret : ""
+      ($token) ? $token->secret : "",
     );
 
-    $key_parts = Util::urlencode_rfc3986($key_parts);
-    $key = implode('&', $key_parts);
-    $request->base_string = $key;
+      $key_parts = Util::urlencode_rfc3986($key_parts);
+      $key = implode('&', $key_parts);
+      $request->base_string = $key;
 
-    return $key;
+      return $key;
   }
 }

@@ -6,8 +6,9 @@ namespace Eher\OAuth;
  * A class for implementing a Signature Method
  * See section 9 ("Signing Requests") in the spec
  */
-abstract class SignatureMethod {
-  /**
+abstract class SignatureMethod
+{
+    /**
    * Needs to return the name of the Signature Method (ie HMAC-SHA1)
    * @return string
    */
@@ -33,8 +34,10 @@ abstract class SignatureMethod {
    * @param string $signature
    * @return bool
    */
-  public function check_signature($request, $consumer, $token, $signature) {
-    $built = $this->build_signature($request, $consumer, $token);
-    return $built == $signature;
+  public function check_signature($request, $consumer, $token, $signature)
+  {
+      $built = $this->build_signature($request, $consumer, $token);
+
+      return $built == $signature;
   }
 }
