@@ -12,6 +12,6 @@
         }
     },
     "require-dev": {
-        "eher/phpunit": "1.6"
+        "phpunit/phpunit": ">=4.8.35 <10"
     }
 }
