@@ -2,7 +2,7 @@
 
 namespace Eher\OAuth;
 
-class ConsumerTest extends \PHPUnit_Framework_TestCase
+class ConsumerTest extends \PHPUnit\Framework\TestCase
 {
     public function testConsumer()
     {
