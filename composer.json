@@ -1,7 +1,7 @@
 {
     "name": "eher/oauth",
     "type": "library",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "description": "OAuth 1 PHP Library",
     "require": {
         "php": ">=5.3.0"
